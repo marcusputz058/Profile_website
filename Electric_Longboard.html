@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Electirc Longboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+								<!--	<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>-->
+									<ul class="icons">
+                                        <li><a href="https://github.com/marcusputz058" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.linkedin.com/in/marcus-putz/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                                        <li><a href="mailto:marcusputz058@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Electric Longboard</h1>
+									</header>
+
+									<span class="image right"><img src="images/Longboard.jpg" alt="" /></span>
+                                    <br>
+                                    <h2>Summary</h2>
+									<p></p>
+									
+                                    <p>This is the first main Mechatronics project that I made. I made this during the summer before my freshman year in college. The board I designed and made, while the electronics I sourced and put together.The board uses a 10S1p battery(37V nomial) and a  190kv 6374 3250W BLDC motor(about 4.4 Horsepower!). I got the idea to make this becuase I really liked to watch Casey Neistat, a famous Youtuber who makes vlogs, and he uses a boosted board all the time.  </p>
+									
+									<hr class="major" />
+                                    
+									<h2>Building of the board</h2>
+                                    
+									<p>I began this project with a ton of research, mainly a forum called eletic skateboard builders. From the infomation on that forum I decided to go with sourcing my own parts and building it myself. There were kits, but they didn't do what I wanted and were outside my budget. But, before any of the mechatronics can be done, I first have to have a board.</p>
+                                    
+                                    <p> To accomplish this, I again read some forums and watched some youtube videos, and found out that it was pretty easy to make your own longboard. So, I began with creating a design I wanted to cut out of wood. I sourced some baltic birch plywood, and all the weights that we had at home and layed donw the plywood to laminate it. Once the wood glue dried, I then cut out the design and drilled the holes needed for the trucks. I then put griptape on and tested how it felt. It felt great! It was time for the next step.</p>
+                                    
+                                    <p>To compete the next step I took all the parts, that I've sourced, and started to wire them up. I came up with the wiring shown below. I had two 5s batterys in series to make a 10s battery pack, which went to a VESC. The VESC is an open source BLDC motor driver, which allows for FOC motor control if your motor accepts it(which mine does). The benefits of FOC, Field oriented control, is that its quiter, more efficent, and allows a better slow driving. The better slow driving works because since the motor controller knows how the motor windings and magnets are positioned it can turn on adjesent coils on. the wiring I came up, also has a key of sorts, which was just a XT-90 connector that goes to itself so when it's not connected there wouln't be a complete circut. When that was all wired up all I had to work on was the creation of teh controller.</p>
+                                    
+                                    <p>To create the controller, I used a common RC car controller. I took it apart and got rid of the turning wheel as all i needed was the throttle trigger. I then found a 3d file for a case that fit the guts of the RC controller.An image of the completed controller can be seen below. </p>
+                                    <span class="image left"><img src="images/Longboard_under.jpg" alt="" /></span> <span class="image right"><img src="images/Longboard_controller.jpg" alt="" /></span>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search 
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Gaggiduino.html">Gaggiuino and Topology Optimization</a></li>
+												<li><a href="Ender_3.html">Modified Ender 3</a></li>
+												<li><a href="CF_Shift_knob.html">Forged Carbon Fiber Shift Knob</a></li>
+												<li><a href="https://connectedvehicles.psu.edu/">Refitting the IVSG Mapping Van</a></li>
+                                                <li><a href="3D_ring.html">3d Printed Ring</a></li>
+                                                <li><a href="Drone.html">FPV Drone</a></li>
+                                                <li><a href="Electric_Longboard.html">Electric Longboard</a></li>
+											</ul>
+										</li>
+                                        <li><a href="Marcus%20Putz%202023.pdf">Resume</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="Gaggiduino.html" class="image"><img src="images/Gaggiaduino.jpg" alt="" /></a>
+											<p>Gaggiuino and Topology Optimization</p>
+										</article>
+										<article>
+											<a href="https://connectedvehicles.psu.edu/" class="image"><img src="images/Mapping-Van_HIGH-RESOLUTION.jpg" alt="" /></a>
+											<p>Refitting the IVSG Mapping Van</p>
+										</article>
+										<article>
+											<a href="CF_Shift_knob.html" class="image"><img src="images/Large_shift_knob.jpg" alt="" /></a>
+											<p>Forged Carbon Fiber Shift Knob</p>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please don't email me unless it's important</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:marcusputz058@gmail.com">marcusputz058@gmail.com</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Marcus Putz. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

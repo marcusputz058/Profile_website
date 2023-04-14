@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Modified Ender 3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+								<!--	<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>-->
+									<ul class="icons">
+                                        <li><a href="https://github.com/marcusputz058" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.linkedin.com/in/marcus-putz/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                                        <li><a href="mailto:marcusputz058@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Modified Ender 3</h1>
+									</header>
+
+									<span class="image right"><img src="images/Ender_3_2023.jpg" alt="" /></span>
+                                    <br>
+                                    <h2>Summary</h2>
+									<p></p>
+									
+                                    <p> This is a project that will probably never have an end as I've been continuously modifiying it since I've gotten it. I use this printer often to create solutions to problems around my apartment.The frist things I've done to it was making modifications that fix the main flaws with the stock design. After that I started to make modifications to increase the printing quality and the ease of use. Lastly I made some modificaitons to increase the print speed but not lose print quality and allow me to print more exotic materials.</p>
+									
+									<hr class="major" />
+                                    
+									<h2>First modificaitons</h2>
+                                    
+									<p>The first modifications were made because I read that they were major failing points of the machine. Those being the extruder being plastic, the electronics box fan cutouts being in a location that allows filament to easily fall into it, and the filament path. The plastic extruded was solved by purchasing a aluminium extruder, while the other problems was solved using a 3d-print.</p>
+                                    <span class="image left"><img src="images/first_mods.png" alt="" /></span>
+									<p>The next major modification I made was to upgrade the main board, as the stock one used out of date stepper motor drivers. These out of date stepper motor drivers caused print quality issues and alot of noise. This upgrade would also allow me to add more functoniality as it had more ports to add filiament runout sensor or a auto bed leveling device. As well as the new board allowed me to change the firmware to Marlin, which allow a ton more functonality and better print quality.</p>
+
+									<hr class="major" />
+
+									<h2>Quality of life and print quality modifications</h2>
+                                    
+									<p>During this period of modificaitons I enjoyed using my printer for projects that arose, but there was an issue I wanted to print for longer, print higher quality models(for engineering and for decorative models), and I would like to reduce the time it take to get prints stated. To solve the first problem and some of the thrid problem I found about Octoprint. Octoprint is a web based applicaiton that allows you to control your printer and view it. So, I used the one rasberry pi I had sitting around and set it up. To solve the second and the thrid problem I decided to upgrade to using a glass bed and a BLTouch. I made the glass bed upgrade first since, it was very easy to make. <span class="image right"><img src="images/ender_3_2021_50.jpg" alt="" /></span>The main benefit with a glass bed is it is guaranteed to be flat, but is comes with some secondary benefits. Those secondary benefits are that the bottom surface mirrors the glass and it is perfectly smooth, the other one is that due to the difference in thermal expansion between the glass and the plastic the part usually pops off when finished. As for the BLTouch, this little device is an auto bed leveling probe. It takes measurements across the print bed to get the Z height, once it knows that the printer will make adjustments to make sure the print is level with the bed. This greatly reduces the time it takes to get prints started, and it also increases print consistency.</p>
+									<hr class="major" />
+
+									<h2>Print speed modifications</h2>
+									<p>Lastly the most recent modifications I've made. To allow my printer to move faster I needed to be able to increase the flow rate that my hotend and extruder can make. So, I decided to upgrade both, as well as the cooling system. I decided to switch to a direct drive extruder, but a super light weight one: The Sherpa mini.  As for the hotend I decided to go with the Phaetus Dragonfly, as it has a bimetallic heat break and allows up to 500C printing. With the upgrade to direct drive, I had to find a new method of mounting the extruder, so to kill two birds with one stone, I decided to go with the Hero me gen 6 tool head system. This allowed me to mount larger part cooling fans, which would increase bridging and the quality of overhangs. An image of the tool head can be seen on the left and below. <span class="image left"><img src="images/ender_3_tool_head.jpg" alt="" /></span> Once, I got all that done, I decided to change up the firmware on the printer to Klipper. I did this as it pushes all the decoding of the commands to the raspberry pi and leaves the main board of the printer to worry about just moving the device. Klipper also comes with input shaping, which allows you to print much faster without a loss of quality. Input shaping works by taking measurements of each access, using an accelerometer, and getting the resonance frequencies. The firmware can then take thoes frequencies can comensate, thus getting rid of ghosting effets. </p>
+                                    
+                                    <p> Lastly, I wanted to print with more engineering filaments, I needed an enclosure. I've been planning to make one but with all the upgrades I've made I decided it was time. The benefits of an enclosue is that 
+                                        <li>It maintains a stable temperature in the print chamber</li>
+                                        <li>It keeps dangerous volitile compounds in the print chamber</li>
+                                        <li>The print noises are kept to a minimum</li>
+                                        So, I went with the Prusa Lack enclosure. I chose this because I could make it 3 lack tables tall, and it has a huge userbase. I printed all the parts in PTEG as I needed them to survive the higher temperatures the print chamber will be at, and since PTEG has a glass transistion temperature of 85 C it should be more than enough. The only modification I had to make is since, I was using a direct drive extrusion system I had to drill a hole on the top to allow the filament to get to the tool head. The completed enclosure can be seen below.
+                                     </p> 
+                                   
+                                    <span class="image right"><img src="images/ender_3_enclosure.jpg" alt="" /></span>
+                                    <h2> Future Upgrades</h2>
+                                    <p> The next major upgrade I would like to make is to make the Z axis belted, as I am seeing some layer inconsistlies and I believe that a belted Z axis would get rid of them. I am also thinking of adding some multi-material system to allow me to print with different colors or a combonation of materials to add in flexiable materials.</p>
+                
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search 
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Gaggiduino.html">Gaggiuino and Topology Optimization</a></li>
+												<li><a href="Ender_3.html">Modified Ender 3</a></li>
+												<li><a href="CF_Shift_knob.html">Forged Carbon Fiber Shift Knob</a></li>
+												<li><a href="https://connectedvehicles.psu.edu/">Refitting the IVSG Mapping Van</a></li>
+                                                <li><a href="3D_ring.html">3d Printed Ring</a></li>
+                                                <li><a href="Drone.html">FPV Drone</a></li>
+                                                <li><a href="Electric_Longboard.html">Electric Longboard</a></li>
+											</ul>
+										</li>
+                                        <li><a href="Marcus%20Putz%202023.pdf">Resume</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="Gaggiduino.html" class="image"><img src="images/Gaggiaduino.jpg" alt="" /></a>
+											<p>Gaggiuino and Topology Optimization</p>
+										</article>
+										<article>
+											<a href="https://connectedvehicles.psu.edu/" class="image"><img src="images/Mapping-Van_HIGH-RESOLUTION.jpg" alt="" /></a>
+											<p>Refitting the IVSG Mapping Van</p>
+										</article>
+										<article>
+											<a href="CF_Shift_knob.html" class="image"><img src="images/Large_shift_knob.jpg" alt="" /></a>
+											<p>Forged Carbon Fiber Shift Knob</p>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please don't email me unless it's important</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:marcusputz058@gmail.com">marcusputz058@gmail.com</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Marcus Putz. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
