@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Electirc Longboard</title>
+		<title>Battle Robot</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,28 +33,41 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Electric Longboard</h1>
+										<h1>Battle Robot (Final Project for ME340)</h1>
 									</header>
 
-									<span class="image right"><img src="images/Longboard.jpg" alt="" /></span>
+									<span class="image right"><img src="images/battle_bot.jpg" alt="" /></span>
                                     <br>
                                     <h2>Summary</h2>
 									<p></p>
 									
-                                    <p>This is the first main Mechatronics project that I made. I made this during the summer before my freshman year in college. The board I designed and made, while the electronics I sourced and put together.The board uses a 10S1p battery(37V nomial) and a  190kv 6374 3250W BLDC motor(about 4.4 Horsepower!). I got the idea to make this becuase I really liked to watch Casey Neistat, a famous Youtuber who makes vlogs, and he uses a boosted board all the time.  </p>
+                                    <p> I've always seen forged carbon parts and enjoyed how they looked. I then stumbled upon a EasyComposites video showing how you can use a 3d printed mold to make forged carbon fiber parts and I knew I had to make something. Once I got my car I thought this would we the perfect project to learn how to fabricate forged carbon fiber parts.</p>
 									
 									<hr class="major" />
                                     
-									<h2>Building of the board</h2>
+									<h2>Design of the shift knob</h2>
                                     
-									<p>I began this project with a ton of research, mainly a forum called eletic skateboard builders. From the infomation on that forum I decided to go with sourcing my own parts and building it myself. There were kits, but they didn't do what I wanted and were outside my budget. But, before any of the mechatronics can be done, I first have to have a board.</p>
+									<p>To begin the process I have to have a 3d model of what I want to make, to then make a mold around it. So, I had to design the shift knob I wanted. I knew I wanted the cylindrical style, so I started with a very basic design. I used very rough dimensions from me holding differet poles to get the overall shape, and then I added a chamfer to the top and a slight taper on the bottom. Once I got that design done, I then printed out a the model, using vase mode to reduce the amount of filiament used, to get an overall idea of how it would feel. I then found out I go it too short, so I adjusted that dimension. I then went with this process two more times until I settled on a shape. Once the over all geomotry was decided I then printed out one with the normal print settting, not hollow, to make sure the bottom hole was the correct dimension and to confirm that it was the correct design. A line up of all the versions can be seen to the below.</p>
+                                    <span class="image left"><img src="images/shift_knob_versions.jpg" alt="" /></span>
+
+									<hr class="major" />
+
+									<h2>Design of the mold</h2>
                                     
-                                    <p> To accomplish this, I again read some forums and watched some youtube videos, and found out that it was pretty easy to make your own longboard. So, I began with creating a design I wanted to cut out of wood. I sourced some baltic birch plywood, and all the weights that we had at home and layed donw the plywood to laminate it. Once the wood glue dried, I then cut out the design and drilled the holes needed for the trucks. I then put griptape on and tested how it felt. It felt great! It was time for the next step.</p>
+									<p>Once I finished the deisgn of the shift knob I just used the geometry as the negative of the mold. From there I had a block with a negative of the shift knob, which isn't that useful. So, to beign with I decided to split the mold in three pieces, I chose this because it allows for easier removal of the part and a forged carbon fiber part needs a plunger. The plunger of the mold is needed as forged carbon fiber parts take their shape by the pressure of pressing the resin and chopped fibers together. From there I needed a method to keep the mold parts parellel to each other so I added holes on the corners to allow for long bolts to clamp the mold. Lastly, I added a chamfer to the parting lines of te mold to aid in removal of the part. </p>
+                                    <span class="image right"><img src="images/cf_mold.png" alt="" /></span>
+									<hr class="major" />
+
+									<h2>Creating the part and post-processing</h2>
+									<p>When I felt like the desing of the mold was finished I printed them out using PTEG and 90% infill, I did this becasue I needed the part to be very stong to withstand the high clamping forces that will be applied to it. I then just followed the processes layed out in the EasyComposites video. Since I designed the part in SolidWorks getting the volume of the part was easy, and that is needed because that's how one knows how much carbon fiber to resin is needed. I used a bolt that I found that matched the diameter of the large hole on the bottom as a place holder to minimize the amount of post-processing needed.</p>
+                                    <p> When the part was done curing, it looked like below. As you can see there is alot of post-processing needed. To clean it up I used the learning factory to sand down the flashing, and make the part smooth. I also made the hold on the bottom to the correct diamenter, using the drill press. I then needed to make a treaded insert so the shfit knob can screw to the car. To do this I used a aluminum stock and the lathe. When that was done I then used some JB-weld to adhere it to the inside of the shift knob.</p>
+                                    <span class="image left"><img src="images/out_of_mold.jpeg" alt="" /></span>
+                        
+                                   
                                     
-                                    <p>To compete the next step I took all the parts, that I've sourced, and started to wire them up. I came up with the wiring shown below. I had two 5s batterys in series to make a 10s battery pack, which went to a VESC. The VESC is an open source BLDC motor driver, which allows for FOC motor control if your motor accepts it(which mine does). The benefits of FOC, Field oriented control, is that its quiter, more efficent, and allows a better slow driving. The better slow driving works because since the motor controller knows how the motor windings and magnets are positioned it can turn on adjesent coils on. the wiring I came up, also has a key of sorts, which was just a XT-90 connector that goes to itself so when it's not connected there wouln't be a complete circut. When that was all wired up all I had to work on was the creation of teh controller.</p>
                                     
-                                    <p>To create the controller, I used a common RC car controller. I took it apart and got rid of the turning wheel as all i needed was the throttle trigger. I then found a 3d file for a case that fit the guts of the RC controller.An image of the completed controller can be seen below. </p>
-                                    <span class="image left"><img src="images/Longboard_under.jpg" alt="" /></span> <span class="image right"><img src="images/Longboard_controller.jpg" alt="" /></span>
+                                    
+                
 								</section>
 
 						</div>
@@ -78,7 +91,6 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-
 										<li>
 											<span class="opener">Projects</span>
 											<ul>
