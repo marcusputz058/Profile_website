@@ -33,24 +33,33 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Stewart Platform (Final Project ME 581)</h1>
+										<h1>Stewart Platform (Final Project ME581)</h1>
 									</header>
 
 									<span class="image right"><img src="images/Stewart_platform.jpg" alt="" /></span>
                                     <br>
                                     <h2>Summary</h2>
-									<p></p>
-									
-                                    <p> </p>
+									<p> This project was the final project for ME 581, Simulation of Multibody Dynamic. During this class, we learned how: 
+                                    <li>diagram topology and determine the mobility of 2D and 3D mechanisms</li>
+                                    <li>compute kinematics and dynamics of 2D mechanisms using generalized coordinates, constraint vectors, and differential-algebraic equations</li>
+                                    <li>measure the mass moment of inertia</li>
+                                    <li>compute kinematics and dynamics of 3D mechanisms using Euler parameters, constraint vectors, and differential-algebraic equations</li>
+                                    <li>describe 2D and 3D kinematics using finite and instantaneous screw axes</li>
+                                    <li>communicate well using verbal, written, and electronic methods</li>
+                                    <br>
+                                        In place of a final exam, Dr.Sommer wanted us to come up with a project that we wanted to work on that would use all the skills we developed during the class. I decided to create a Stewart Platform. This project used six SG90 servos and an Arduino Nano.</p>
 									
 									<hr class="major" />
+                                    <h2>Design of mechanical aspects</h2>
+                                    <span class="image left"><img src="images/Stewart_plat_cad.png" alt="" /></span>
+                                    <p>To begin with, is part I decided with using SG90 servos as they are cheap and I have experience using them. So, I based the base of the design using these servos. I then used threaded rods and small ball joints to connect the platform to the servo horns. Once, I completed choosing the parts designing the 3d-prints was very easy as the only requirements is that it could hold the servo motors and have a place to screw the ball joints. I did have to be wary of the spacing between the motors and the mounting points of the platform, as I needed those dimensions for calculations later. The completed design can be seen to the left. </p>
                                     
-                                    <h1>WORK IN PROGRESS</h1>
-                                   
-                                    
-                                    
-                                    
-                
+                                    <hr class="major" />
+                                    <h2>Software and Math</h2>
+                                    <p>To get the platform working in the method I wanted I used the knowledge we learned in class about getting the leg lengths to move the platform. The main difference between what we did in class was that I had to take into account the servo horns. Since I wasn't using linear actuators and using servos with a horn and a ball joint to produce linear motion I had to do some additional math. Thankfully, it wasn't difficult, and many other people have already successfully done this, useful to check my math.</p>
+                                    <p>Once I was able to calculate the necessary leg lengths I use a simple formula to get the needed servo angles. The rest of the code just moves the servos to the correct place. Moving the servos was completed just using the Servo library. Two of the most helpful images I found online that helped me with the code and the math can be seen on the right. The image with the two circles shows how the leg lengths are calculated, while the image with the servo horn is how the angle is calculated from the needed change in leg length. </p>
+                                    <span class="image right"><img src="images/Stewart_plat_math.png" alt="" /></span>
+                        
 								</section>
 
 						</div>
