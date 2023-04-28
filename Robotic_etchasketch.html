@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Robotic Etch-a-Sketch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/robot_icon.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+								<!--	<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>-->
+									<ul class="icons">
+                                        <li><a href="https://github.com/marcusputz058" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.linkedin.com/in/marcus-putz/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                                        <li><a href="mailto:marcusputz058@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Robotic Etch-a-Sketch (Final Project for ME 556)</h1>
+									</header>
+
+									<span class="image right"><img src="images/Etchasketch.jpg" alt="" /></span>
+                                    <br>
+                                    <h2>Summary</h2>
+									<p>Similar to the other project-based classes I have talked about on this site, the professor assigned a final project instead of a final exam for this class. ME 556, Robotic Concepts, is a class where we learned the "Analysis of robotic systems; end effectors, vision systems, sensors, stability and control, off-line programming, simulation of robotic systems". As for the project, we, a team of three, were given two NEMA 17 stepper motors, an Arduino, and some sample code; and were told to create a robot that would take images and then draw them on the etch-a-sketch. At the end of the project we were told we created the most feature-set version of the robot the professor has ever seen. Some of the features we added were, image optimization for drawing on an etch-a-sketch, the ability to add personalized text to images, the option to free draw, and most importantly, improved speed for drawing. Notability the improved speed drawing was developed by me after the professor said it wasn't possible.</p>
+									
+                                    <p></p>
+									
+									<hr class="major" />
+                                    <h2>First prototype and testing</h2>
+                                    <span class="image left"><img src="images/etch_test1.jpg" alt="" /></span>
+                                    <p>To start this project we began with a cardboard prototype, just to get the motors attached and test the sample code. We noticed that it was extremely slow. Drawing the image seen on the left in about 3 mins. I knew that that can't be the fastest it could run, but according to the professor, that's the fastest it could run using the existing code. So, I started researching ways to increase its speed. During that, we devised methods to decode images to a set of points that could be sent to the steppers to draw them out. We came up with first editing the image so that it could be more easily and it would allow us the added benefit to adjust the algorithm to draw the best picture, as different pictures require different decoding techniques.</p>
+                                  
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <hr class="major" />
+                                    <h2>Discovery about speeding up motors</h2>
+                                    <p>I was correct in my suspicions and there was a way to speed up the code. I found that the reason behind it moving so slowly was that since we used MATLAB to process and drive the motors there was a communication delay between MATLAB and the Arduino. So, I wrote an Arduino script that would move the stepper motors to points stored within a matrix and made MATLAB just focus on the processing. The method of changing which device was actually moving the motors worked wonderfully! As you can see in the gif on the right, the robot now moves to the points much quicker(excuse the large size, it is needed so that you can see the line being drawn).</p>
+                                    <span class="image right"><img src="images/etch_moving.gif" alt="" /></span>
+                                    
+                                    <hr class="major" />
+                                    <h2>Other features added</h2>
+                                    <p>Along with the speed drawing, we added the ability to free draw where a user can draw on a MATLAB plot and the etch-a-sketch would then draw it in real life. We then added the feature to change the size of the image, and the ability to change the pixel size. Lastly, we added the ability to add text to the image, allowing the users to also change the font and the placement of the text.</p>
+                                    
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search 
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Gaggiduino.html">Gaggiuino and Topology Optimization</a></li>
+												<li><a href="Ender_3.html">Modified Ender 3</a></li>
+												<li><a href="CF_Shift_knob.html">Forged Carbon Fiber Shift Knob</a></li>
+												<li><a href="https://connectedvehicles.psu.edu/">Refitting the IVSG Mapping Van</a></li>
+                                                <li><a href="Stewart_Plat.html">Stewart Platform</a></li>
+                                                <li><a href="Maze_robot.html">Maze Solving Robot</a></li>
+                                                <li><a href="Robotic_etchasketch.html">Robotic Etch-a-Sketch</a></li>
+                                                <li><a href="3D_ring.html">3d printed ring</a></li>
+                                                <li><a href="Battle_robot.html">Battle Robot</a></li>
+                                                <li><a href="Drone.html">FPV Drone</a></li>
+                                                <li><a href="Electric_Longboard.html">Electric Longboard</a></li>
+											</ul>
+										</li>
+                                        <li><a href="Marcus%20Putz%202023.pdf">Resume</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="Gaggiduino.html" class="image"><img src="images/Gaggiaduino.jpg" alt="" /></a>
+											<p>Gaggiuino and Topology Optimization</p>
+										</article>
+										<article>
+											<a href="https://connectedvehicles.psu.edu/" class="image"><img src="images/Mapping-Van_HIGH-RESOLUTION.jpg" alt="" /></a>
+											<p>Refitting the IVSG Mapping Van</p>
+										</article>
+										<article>
+											<a href="CF_Shift_knob.html" class="image"><img src="images/Large_shift_knob.jpg" alt="" /></a>
+											<p>Forged Carbon Fiber Shift Knob</p>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Serious collaboration or work inquiries only.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:marcusputz058@gmail.com">marcusputz058@gmail.com</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Marcus Putz. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
